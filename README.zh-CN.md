@@ -16,7 +16,7 @@
 ## 安装
 
 1. 安装 [Tampermonkey](https://www.tampermonkey.net/) 或 [Violentmonkey](https://violentmonkey.github.io/) 等用户脚本管理器。
-2. 打开 `niconico-comment-tweaker.js`，用脚本管理器安装。
+2. 打开 [niconico-comment-tweaker.user.js](https://github.com/penguinhi/niconico-comment-tweaker/raw/master/niconico-comment-tweaker.user.js)，脚本管理器会弹出安装页面，点击安装即可。
 3. 打开 niconico 的视频页面（已打开的请刷新）。
 
 ## 使用方法
@@ -41,3 +41,7 @@
 - **字体模式**（默认）：在绘制弹幕时修改字号。调整后新出现的弹幕才会生效。放到最大时，弹幕边缘可能会有少许重叠。
 - **贴图模式**：直接缩放已经绘制好的每条弹幕图像，立即生效。放大后弹幕更容易互相重叠。
 - **不调整大小**：只调整不透明度。
+
+## 许可证
+
+[MIT](LICENSE)

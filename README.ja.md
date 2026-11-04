@@ -16,7 +16,7 @@
 ## インストール
 
 1. [Tampermonkey](https://www.tampermonkey.net/) や [Violentmonkey](https://violentmonkey.github.io/) などのユーザースクリプトマネージャーをインストールします。
-2. `niconico-comment-tweaker.js` を開き、ユーザースクリプトマネージャーでインストールします。
+2. [niconico-comment-tweaker.user.js](https://github.com/penguinhi/niconico-comment-tweaker/raw/master/niconico-comment-tweaker.user.js) を開くと、ユーザースクリプトマネージャーのインストール画面が表示されるので、インストールします。
 3. ニコニコ動画の動画ページを開きます（開いている場合は再読み込みしてください）。
 
 ## 使い方
@@ -41,3 +41,7 @@
 - **フォントモード**（初期設定）：コメントを描画するときの文字サイズを変更します。変更は、調整後に流れてくるコメントから反映されます。最大まで大きくすると、コメントの端が少し重なることがあります。
 - **スプライトモード**：描画済みのコメント画像をそのまま拡大縮小し、変更はすぐに反映されます。大きくするとコメント同士が重なりやすくなります。
 - **サイズを変更しない**：不透明度だけを調整します。
+
+## ライセンス
+
+[MIT](LICENSE)

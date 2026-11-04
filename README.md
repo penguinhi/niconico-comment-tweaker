@@ -16,7 +16,7 @@ A userscript that adjusts the **size** and **opacity** of comments on Niconico (
 ## Installation
 
 1. Install a userscript manager such as [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/).
-2. Open `niconico-comment-tweaker.js` and install it with your userscript manager.
+2. Open [niconico-comment-tweaker.user.js](https://github.com/penguinhi/niconico-comment-tweaker/raw/master/niconico-comment-tweaker.user.js). Your userscript manager will show an install page; click Install.
 3. Open (or reload) a video page on Niconico.
 
 ## Usage
@@ -41,3 +41,7 @@ Open the settings panel in either of these ways:
 - **Font mode** (default): Changes the font size when comments are drawn. The change applies to comments that appear after you adjust it. At the maximum size, the edges of comments may overlap slightly.
 - **Sprite mode**: Scales each already-drawn comment image, and the change applies immediately. When enlarged, comments overlap more easily.
 - **No size change**: Only opacity is adjusted.
+
+## License
+
+[MIT](LICENSE)

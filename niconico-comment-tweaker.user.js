@@ -4,8 +4,13 @@
 // @name:en      Niconico Comment Tweaker
 // @name:zh-CN   niconico 弹幕显示调整
 // @name:zh-TW   niconico 彈幕顯示調整
-// @namespace    https://example.com/nico-comment-tweaker
+// @namespace    https://github.com/penguinhi/niconico-comment-tweaker
 // @version      2.3.0
+// @author       penguinhi
+// @license      MIT
+// @homepageURL  https://github.com/penguinhi/niconico-comment-tweaker
+// @supportURL   https://github.com/penguinhi/niconico-comment-tweaker/issues
+// @icon         https://www.nicovideo.jp/favicon.ico
 // @description        コメントの大きさ（文字サイズ変更／描画の拡大縮小の2方式）と透明度を調整します。Alt+C または左下のボタンで設定を開きます。
 // @description:en     Adjust comment size (via font size or sprite scaling) and opacity. Press Alt+C or click the bottom-left button to open settings.
 // @description:zh-CN  调整弹幕大小（可选改字号或缩放贴图两种方式）和透明度。按 Alt+C 或点击左下角按钮打开设置。
