@@ -1,6 +1,6 @@
 # niconico 弹幕显示调整
 
-[English](README.md) | [日本語](README.ja.md) | **简体中文**
+[English](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/README.md) | [日本語](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/README.ja.md) | **简体中文**
 
 调整 niconico 动画（nicovideo.jp）弹幕**大小**和**不透明度**的用户脚本。
 
@@ -44,4 +44,4 @@
 
 ## 许可证
 
-[MIT](LICENSE)
+[MIT](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/LICENSE)

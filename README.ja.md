@@ -1,6 +1,6 @@
 # ニコニコ動画 コメント表示調整
 
-[English](README.md) | **日本語** | [简体中文](README.zh-CN.md)
+[English](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/README.md) | **日本語** | [简体中文](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/README.zh-CN.md)
 
 ニコニコ動画のコメントの**大きさ**と**不透明度**を調整するユーザースクリプトです。
 
@@ -44,4 +44,4 @@
 
 ## ライセンス
 
-[MIT](LICENSE)
+[MIT](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/LICENSE)

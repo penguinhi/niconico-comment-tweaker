@@ -1,6 +1,6 @@
 # Niconico Comment Tweaker
 
-**English** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
+**English** | [日本語](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/README.ja.md) | [简体中文](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/README.zh-CN.md)
 
 A userscript that adjusts the **size** and **opacity** of comments on Niconico (nicovideo.jp) videos.
 
@@ -44,4 +44,4 @@ Open the settings panel in either of these ways:
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/penguinhi/niconico-comment-tweaker/blob/master/LICENSE)
