@@ -38,36 +38,30 @@
   try { Object.assign(settings, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (_) {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(settings)); } catch (_) {} };
 
-  const stats = { font: 0, sprite: 0 };
-
   const I18N = {
     'zh-CN': {
       title: '弹幕设置', modeLabel: '大小调整方式：',
       modeFont: '字体模式（修改字号）', modeSprite: '贴图模式（缩放每条弹幕）', modeOff: '不调整大小',
       size: '字号：', opacity: '不透明度：', reset: '恢复默认', fab: '弹',
       lang: '语言：', auto: '自动（跟随浏览器）',
-      stat: (f, s) => `诊断：字体钩子命中 ${f} 次，贴图钩子命中 ${s} 次`,
     },
     'zh-TW': {
       title: '彈幕設定', modeLabel: '大小調整方式：',
       modeFont: '字體模式（修改字體大小）', modeSprite: '貼圖模式（縮放每條彈幕）', modeOff: '不調整大小',
       size: '字體大小：', opacity: '不透明度：', reset: '恢復預設', fab: '彈',
       lang: '語言：', auto: '自動（跟隨瀏覽器）',
-      stat: (f, s) => `診斷：字體鉤子命中 ${f} 次，貼圖鉤子命中 ${s} 次`,
     },
     ja: {
       title: 'コメント設定', modeLabel: 'サイズ調整方式：',
       modeFont: 'フォントモード（文字サイズを変更）', modeSprite: 'スプライトモード（各コメントを拡大縮小）', modeOff: 'サイズを変更しない',
       size: 'サイズ：', opacity: '不透明度：', reset: '初期設定に戻す', fab: 'コ',
       lang: '言語：', auto: '自動（ブラウザに従う）',
-      stat: (f, s) => `診断：フォントフック ${f} 回、スプライトフック ${s} 回`,
     },
     en: {
       title: 'Comment Settings', modeLabel: 'Size adjustment:',
       modeFont: 'Font mode (change font size)', modeSprite: 'Sprite mode (scale each comment)', modeOff: 'No size change',
       size: 'Size: ', opacity: 'Opacity: ', reset: 'Reset to defaults', fab: 'C',
       lang: 'Language:', auto: 'Auto (follow browser)',
-      stat: (f, s) => `Diagnostics: font hook ${f} hits, sprite hook ${s} hits`,
     },
   };
   function pickLang() {
@@ -124,7 +118,6 @@
       set(value) {
         original.set(this, value);
         if (settings.mode === 'font' && settings.scale !== 1 && isTargetForFont(this)) {
-          stats.font++;
           desc.set.call(this, scaleFont(String(value)));
         } else {
           desc.set.call(this, value);
@@ -142,7 +135,6 @@
     if (settings.mode !== 'sprite' || s === 1 || !commentCanvases.has(this.canvas)) {
       return origDrawImage.call(this, img, ...a);
     }
-    stats.sprite++;
     let sx, sy, sw, sh, dx, dy, dw, dh;
     if (a.length === 2) {            // drawImage(img, dx, dy)
       [dx, dy] = a; dw = img.width; dh = img.height;
@@ -169,7 +161,7 @@
     document.addEventListener('fullscreenchange', () => setTimeout(scanCanvases, 300));
   }
 
-  let panel = null, statTimer = null;
+  let panel = null;
 
   function buildPanel() {
     panel = document.createElement('div');
@@ -213,8 +205,7 @@
         <option value="zh-TW">繁體中文</option>
         <option value="en">English</option>
       </select>
-      <button id="nct-reset" style="width:100%;margin-top:6px">${T.reset}</button>
-      <div id="nct-stat" style="margin-top:8px;font-size:11px;color:#aaa"></div>`;
+      <button id="nct-reset" style="width:100%;margin-top:6px">${T.reset}</button>`;
     panel.appendChild(body);
     document.body.appendChild(panel);
 
@@ -248,7 +239,6 @@
     }
     if (panel) {
       const wasOpen = panel.style.display !== 'none';
-      clearInterval(statTimer);
       panel.remove();
       panel = null;
       if (wasOpen) togglePanel();
@@ -260,12 +250,6 @@
     reparentUI();
     const show = panel.style.display === 'none';
     panel.style.display = show ? 'block' : 'none';
-    clearInterval(statTimer);
-    if (show) {
-      statTimer = setInterval(() => {
-        panel.querySelector('#nct-stat').textContent = T.stat(stats.font, stats.sprite);
-      }, 500);
-    }
   }
 
   // キャプチャフェーズで捕捉し、プレーヤーより先にキーを処理する
