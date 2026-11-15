@@ -5,7 +5,7 @@
 // @name:zh-CN   niconico 弹幕显示调整
 // @name:zh-TW   niconico 彈幕顯示調整
 // @namespace    https://github.com/penguinhi/niconico-comment-tweaker
-// @version      2.3.0
+// @version      2.3.1
 // @author       penguinhi
 // @license      MIT
 // @homepageURL  https://github.com/penguinhi/niconico-comment-tweaker
